@@ -1,0 +1,1037 @@
+# WEND 3D — METELLUS OS
+
+## RÔLE
+
+Tu es un ingénieur logiciel senior spécialisé en :
+
+* React
+* TypeScript
+* Three.js
+* React Three Fiber
+* Drei
+* Framer Motion
+* Tailwind CSS
+* UI/UX futuriste
+* architecture logicielle modulaire
+
+Ta mission est de construire une application web immersive appelée **WEND 3D — METELLUS OS**.
+
+WEND signifie **Wide Expanding Neural Design**.
+
+L'objectif est de créer une interface qui donne l'impression d'utiliser un **système d'exploitation personnel futuriste**, inspiré des interfaces JARVIS, mais avec sa propre identité visuelle.
+
+---
+
+# 1. CONCEPT
+
+WEND 3D est un **desktop futuriste en 3D**.
+
+L'écran ne doit pas ressembler à un simple dashboard.
+
+Il doit donner l'impression que l'utilisateur se trouve à l'intérieur d'un système intelligent.
+
+L'interface principale contient :
+
+* une scène 3D interactive
+* une orb centrale intelligente
+* des panneaux holographiques
+* des widgets système
+* un terminal
+* un explorateur de fichiers simulé
+* une horloge
+* des informations système simulées
+* un système de notifications
+* un centre de commandes
+* des animations fluides
+
+L'expérience doit être immersive mais rester rapide et utilisable.
+
+---
+
+# 2. STACK
+
+Utiliser :
+
+* React
+* TypeScript
+* Vite
+* Three.js
+* React Three Fiber
+* Drei
+* Framer Motion
+* Tailwind CSS
+* Lucide React
+
+Éviter les dépendances inutiles.
+
+Le projet doit fonctionner directement dans Replit.
+
+---
+
+# 3. DESIGN SYSTEM
+
+## Couleurs principales
+
+Background :
+
+#0B0F19
+
+Primary :
+
+#7C3AED
+
+Secondary :
+
+#06B6D4
+
+Accent :
+
+#22D3EE
+
+Text :
+
+#F8FAFC
+
+Muted :
+
+#94A3B8
+
+Danger :
+
+#EF4444
+
+Success :
+
+#22C55E
+
+Utiliser des effets :
+
+* glow
+* glassmorphism
+* blur
+* transparence
+* gradients
+* particules
+* lignes lumineuses
+* bordures fines
+* ombres douces
+
+Le design doit être :
+
+**futuriste + premium + minimaliste + cyber + élégant.**
+
+Éviter l'effet "gaming RGB excessif".
+
+---
+
+# 4. ÉCRAN DE BOOT
+
+Au lancement afficher une séquence de démarrage.
+
+Exemple :
+
+WEND SYSTEM
+
+INITIALIZING...
+
+NEURAL CORE ........ OK
+
+3D ENGINE .......... OK
+
+MEMORY ............. OK
+
+INTERFACE .......... OK
+
+SYSTEM READY
+
+Puis transition fluide vers le desktop.
+
+Ajouter :
+
+* animation de texte
+* scanline
+* particules
+* barre de progression
+* son uniquement si disponible et désactivé par défaut
+
+Le boot screen doit être court.
+
+---
+
+# 5. DESKTOP 3D
+
+Créer une scène Three.js.
+
+Au centre :
+
+## WEND CORE
+
+Une grande orb 3D futuriste.
+
+L'orb doit :
+
+* tourner lentement
+* avoir plusieurs anneaux
+* contenir des particules
+* réagir au mouvement de la souris
+* avoir un léger effet de pulsation
+* changer légèrement d'intensité lorsqu'une interaction se produit
+
+Créer plusieurs couches :
+
+1. Core
+2. Inner glow
+3. Energy rings
+4. Particles
+5. Orbiting nodes
+
+Ajouter une animation idle.
+
+---
+
+# 6. ENVIRONNEMENT 3D
+
+Créer un environnement spatial abstrait.
+
+Éléments :
+
+* grille futuriste
+* particules
+* lignes lumineuses
+* profondeur
+* brouillard léger
+* objets géométriques abstraits
+
+Ne pas créer une ville ou un décor complexe.
+
+Le centre doit rester l'orb WEND.
+
+---
+
+# 7. HUD
+
+Créer un HUD autour de la scène.
+
+## TOP BAR
+
+Afficher :
+
+WEND
+
+METELLUS OS
+
+STATUS: ONLINE
+
+TIME
+
+DATE
+
+---
+
+# 8. PANNEAU GAUCHE
+
+Créer une sidebar holographique.
+
+Sections :
+
+HOME
+
+SYSTEM
+
+FILES
+
+TERMINAL
+
+AGENTS
+
+MEMORY
+
+NETWORK
+
+SETTINGS
+
+Chaque élément doit être cliquable.
+
+Ajouter :
+
+* icône
+* hover
+* animation
+* état actif
+
+La sidebar peut être réduite.
+
+---
+
+# 9. PANNEAU DROIT
+
+Créer un panneau système.
+
+Afficher :
+
+CPU
+
+RAM
+
+STORAGE
+
+NETWORK
+
+TEMPERATURE
+
+UPTIME
+
+Ces données peuvent être simulées.
+
+Créer des graphiques animés.
+
+Exemple :
+
+CPU 37%
+
+RAM 62%
+
+NETWORK 84 Mbps
+
+STORAGE 48%
+
+Les valeurs doivent évoluer légèrement automatiquement.
+
+---
+
+# 10. COMMAND CENTER
+
+Créer une interface de commande centrale.
+
+Raccourci :
+
+CTRL + K
+
+Ouvrir une palette de commandes.
+
+Commandes :
+
+Open Terminal
+
+Open Files
+
+Open Agents
+
+Open Memory
+
+Open System
+
+Open Settings
+
+Run System Scan
+
+Toggle 3D
+
+Toggle Fullscreen
+
+Toggle Theme
+
+Chaque commande doit fonctionner.
+
+---
+
+# 11. TERMINAL
+
+Créer un terminal intégré.
+
+Design :
+
+fond sombre
+
+texte monospace
+
+glow subtil
+
+Commandes simulées :
+
+help
+
+clear
+
+system
+
+status
+
+scan
+
+memory
+
+agents
+
+date
+
+time
+
+version
+
+about
+
+Les commandes doivent produire de vraies réponses dans l'interface.
+
+Exemple :
+
+> system
+
+WEND METELLUS OS
+
+Version 0.1.0
+
+Ne pas exécuter de commandes système dangereuses.
+
+Le terminal est une simulation contrôlée.
+
+---
+
+# 12. FILE MANAGER
+
+Créer un explorateur de fichiers simulé.
+
+Structure :
+
+WEND/
+
+├── Projects/
+
+├── Documents/
+
+├── Media/
+
+├── Code/
+
+├── AI/
+
+└── System/
+
+Permettre :
+
+* navigation
+* ouverture de dossiers
+* retour
+* création simulée de dossier
+* affichage des fichiers
+* recherche
+
+Ne pas modifier réellement les fichiers de l'ordinateur dans cette V1.
+
+---
+
+# 13. AGENT CENTER
+
+Créer une page :
+
+## WEND AGENTS
+
+Afficher plusieurs agents.
+
+### NEXUS
+
+General Intelligence
+
+Status: ONLINE
+
+### SIGMA
+
+Coding Intelligence
+
+Status: ONLINE
+
+### PHANTOM
+
+Voice Intelligence
+
+Status: STANDBY
+
+Chaque agent possède :
+
+* avatar/orb
+* statut
+* description
+* bouton ACTIVATE
+* activité
+* niveau d'énergie
+
+Pour cette V1, les agents sont simulés.
+
+---
+
+# 14. MEMORY CENTER
+
+Créer un espace :
+
+## WEND MEMORY
+
+Afficher :
+
+Recent Memories
+
+Pinned Memories
+
+Projects
+
+Knowledge
+
+Créer des cartes mémoire.
+
+Exemple :
+
+PROJECT
+
+WEND 3D
+
+STATUS
+
+ACTIVE
+
+Ajouter recherche et filtres.
+
+---
+
+# 15. SYSTEM SCAN
+
+Ajouter un bouton :
+
+SYSTEM SCAN
+
+Lorsqu'il est activé :
+
+SCAN INITIALIZING...
+
+CHECKING CORE...
+
+CHECKING MEMORY...
+
+CHECKING NETWORK...
+
+CHECKING INTERFACE...
+
+SYSTEM HEALTH: 98%
+
+Afficher une animation circulaire.
+
+---
+
+# 16. NOTIFICATIONS
+
+Créer un système de notifications.
+
+Exemples :
+
+WEND initialized.
+
+NEXUS is online.
+
+System scan completed.
+
+New memory created.
+
+Project updated.
+
+Les notifications apparaissent avec une animation.
+
+---
+
+# 17. WINDOWS
+
+Les modules doivent apparaître sous forme de fenêtres holographiques.
+
+Fenêtres :
+
+Terminal
+
+Files
+
+Agents
+
+Memory
+
+System
+
+Settings
+
+Chaque fenêtre doit :
+
+* être draggable si possible
+* être redimensionnable si possible
+* avoir minimiser
+* maximiser
+* fermer
+* animation d'ouverture
+* animation de fermeture
+
+Sur mobile, elles doivent devenir plein écran.
+
+---
+
+# 18. SETTINGS
+
+Créer :
+
+## APPEARANCE
+
+Dark
+
+Light
+
+Cyber
+
+Minimal
+
+## EFFECTS
+
+Particles
+
+Glow
+
+Animations
+
+Grid
+
+## PERFORMANCE
+
+Low
+
+Medium
+
+High
+
+## SYSTEM
+
+Version
+
+About
+
+Reset Interface
+
+---
+
+# 19. VOICE UI
+
+Préparer l'architecture pour une future commande vocale.
+
+Créer un bouton microphone.
+
+Lorsqu'il est activé afficher :
+
+LISTENING...
+
+Pour la V1, utiliser l'API Web Speech Recognition si disponible.
+
+Commandes possibles :
+
+"open terminal"
+
+"open files"
+
+"show system"
+
+"open agents"
+
+"close window"
+
+Si la reconnaissance vocale n'est pas disponible, afficher une notification appropriée.
+
+---
+
+# 20. INTERACTIONS
+
+Tout doit être vivant.
+
+Ajouter :
+
+* hover
+* click feedback
+* transitions
+* micro animations
+* glow
+* particules
+* changements d'état
+
+La souris doit influencer légèrement la scène 3D.
+
+Le curseur peut avoir un effet futuriste discret.
+
+---
+
+# 21. RESPONSIVE
+
+Desktop :
+
+interface complète.
+
+Tablet :
+
+interface adaptée.
+
+Mobile :
+
+transformer les fenêtres en panneaux plein écran.
+
+Ne jamais laisser l'interface dépasser horizontalement.
+
+---
+
+# 22. PERFORMANCE
+
+La performance est prioritaire.
+
+Utiliser :
+
+* lazy loading
+* Suspense
+* limitation des particules
+* instancing lorsque nécessaire
+* animations GPU
+* éviter les re-renders inutiles
+
+Ajouter automatiquement un mode performance réduit si nécessaire.
+
+---
+
+# 23. ARCHITECTURE
+
+Créer une architecture propre :
+
+src/
+
+components/
+
+components/3d/
+
+components/hud/
+
+components/windows/
+
+components/system/
+
+components/terminal/
+
+components/files/
+
+components/agents/
+
+components/memory/
+
+components/ui/
+
+hooks/
+
+lib/
+
+data/
+
+types/
+
+styles/
+
+Créer des composants réutilisables.
+
+---
+
+# 24. ÉTAT GLOBAL
+
+Créer un système global pour gérer :
+
+activeWindow
+
+windows
+
+theme
+
+performanceMode
+
+notifications
+
+systemStats
+
+activeAgent
+
+sidebarState
+
+settings
+
+bootCompleted
+
+voiceState
+
+---
+
+# 25. RACCOURCIS
+
+Ajouter :
+
+CTRL + K → Command Center
+
+CTRL + T → Terminal
+
+CTRL + F → Files
+
+CTRL + A → Agents
+
+ESC → fermer fenêtre
+
+F11 → fullscreen
+
+---
+
+# 26. PAGE D'ACCUEIL
+
+L'écran principal doit afficher :
+
+WEND CORE
+
+SYSTEM ONLINE
+
+CPU
+
+RAM
+
+NETWORK
+
+TIME
+
+DATE
+
+RECENT ACTIVITY
+
+QUICK ACTIONS
+
+Les Quick Actions :
+
+TERMINAL
+
+FILES
+
+AGENTS
+
+MEMORY
+
+SYSTEM SCAN
+
+---
+
+# 27. ANIMATIONS
+
+Utiliser Framer Motion pour l'interface.
+
+Utiliser Three.js pour la scène 3D.
+
+Les animations doivent être :
+
+fluides
+
+rapides
+
+élégantes
+
+pas excessives.
+
+---
+
+# 28. AUDIO
+
+Préparer une architecture audio pour :
+
+* boot
+* notification
+* click
+* system scan
+* voice activation
+
+Mais désactiver les sons par défaut.
+
+---
+
+# 29. ACCESSIBILITÉ
+
+Ajouter :
+
+* navigation clavier
+* focus visible
+* aria-labels
+* contraste suffisant
+* réduction des animations avec prefers-reduced-motion
+
+---
+
+# 30. OBJECTIF FINAL
+
+Je ne veux PAS un simple dashboard.
+
+Je veux que lorsque l'utilisateur ouvre WEND 3D, il ait immédiatement l'impression :
+
+"Je viens d'entrer dans mon propre système d'exploitation futuriste."
+
+L'expérience doit être :
+
+IMMERSIVE
+
+INTELLIGENTE
+
+RAPIDE
+
+ÉLÉGANTE
+
+MODULAIRE
+
+FUTURISTE
+
+---
+
+# 31. ORDRE DE DÉVELOPPEMENT
+
+Construis le projet dans cet ordre :
+
+PHASE 1
+
+Boot screen
+
+↓
+
+PHASE 2
+
+3D environment
+
+↓
+
+PHASE 3
+
+WEND Core
+
+↓
+
+PHASE 4
+
+HUD
+
+↓
+
+PHASE 5
+
+Windows
+
+↓
+
+PHASE 6
+
+Terminal
+
+↓
+
+PHASE 7
+
+File Manager
+
+↓
+
+PHASE 8
+
+Agent Center
+
+↓
+
+PHASE 9
+
+Memory
+
+↓
+
+PHASE 10
+
+System monitoring
+
+↓
+
+PHASE 11
+
+Command Center
+
+↓
+
+PHASE 12
+
+Voice interface
+
+↓
+
+PHASE 13
+
+Settings
+
+↓
+
+PHASE 14
+
+Responsive
+
+↓
+
+PHASE 15
+
+Performance optimization
+
+---
+
+# 32. RÈGLE IMPORTANTE POUR REPLIT
+
+Ne crée pas uniquement des maquettes statiques.
+
+Chaque élément visible doit être fonctionnel ou avoir une simulation interactive.
+
+Si une fonctionnalité réelle nécessite des permissions système ou un backend qui n'existe pas encore, créer une **simulation propre** et préparer une architecture permettant de la remplacer plus tard.
+
+Ne jamais prétendre avoir accès au véritable système de fichiers, CPU ou réseau si ce n'est pas réellement disponible.
+
+---
+
+# 33. PREMIÈRE VERSION
+
+Commence par construire une V1 parfaitement fonctionnelle avec :
+
+BOOT SCREEN
+
+*
+
+3D ENVIRONMENT
+
+*
+
+WEND CORE
+
+*
+
+HUD
+
+*
+
+SIDEBAR
+
+*
+
+SYSTEM PANEL
+
+*
+
+COMMAND CENTER
+
+*
+
+TERMINAL
+
+*
+
+WINDOW SYSTEM
+
+*
+
+SETTINGS
+
+Le résultat doit être immédiatement utilisable après lancement de Replit.
+
+Après chaque grande étape, vérifier que l'application compile et fonctionne avant de continuer.
+
+Ne supprime pas les fonctionnalités déjà fonctionnelles lorsque tu ajoutes les suivantes.
