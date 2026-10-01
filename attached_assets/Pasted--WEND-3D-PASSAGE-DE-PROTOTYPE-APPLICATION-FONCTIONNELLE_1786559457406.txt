@@ -1,0 +1,929 @@
+# WEND 3D — PASSAGE DE PROTOTYPE À APPLICATION FONCTIONNELLE
+
+Tu travailles sur le projet **WEND 3D — METELLUS OS** déjà créé.
+
+NE REFAIS PAS LE DESIGN DEPUIS ZÉRO.
+
+Conserve l'identité visuelle, la scène 3D, l'orb WEND, les animations et la structure existante.
+
+Ta mission est maintenant de transformer le prototype en une **application réellement fonctionnelle et interactive**.
+
+---
+
+# 1. RÈGLE PRINCIPALE
+
+Chaque bouton visible doit faire quelque chose.
+
+Chaque menu doit fonctionner.
+
+Chaque fenêtre doit fonctionner.
+
+Chaque paramètre doit être sauvegardé.
+
+Aucune interaction importante ne doit être une simple animation sans logique derrière.
+
+Avant de modifier quoi que ce soit :
+
+1. analyse le projet existant ;
+2. identifie les composants déjà créés ;
+3. identifie les fonctionnalités déjà fonctionnelles ;
+4. conserve-les ;
+5. améliore uniquement ce qui manque.
+
+Ne casse jamais une fonctionnalité existante.
+
+---
+
+# 2. ARCHITECTURE FONCTIONNELLE
+
+Créer une architecture claire :
+
+src/
+components/
+pages/
+windows/
+hooks/
+stores/
+services/
+utils/
+data/
+types/
+
+Utiliser un état global propre pour gérer :
+
+* fenêtres ouvertes
+* fenêtres minimisées
+* fenêtre active
+* position des fenêtres
+* thème
+* paramètres
+* notifications
+* statistiques système
+* agents
+* fichiers simulés
+* mémoire
+* terminal
+* commandes
+* état vocal
+
+Si une librairie de state management est déjà utilisée, conserve-la.
+
+Sinon utiliser une solution simple et légère.
+
+---
+
+# 3. WINDOW MANAGER
+
+Créer un vrai système de fenêtres.
+
+Chaque fenêtre doit avoir :
+
+* ouvrir
+* fermer
+* minimiser
+* maximiser
+* restaurer
+* focus
+* z-index
+* déplacement
+* position mémorisée
+
+Fenêtres :
+
+TERMINAL
+
+FILES
+
+AGENTS
+
+MEMORY
+
+SYSTEM
+
+SETTINGS
+
+COMMAND CENTER
+
+Lorsqu'une fenêtre est ouverte :
+
+* elle devient automatiquement active ;
+* elle passe au premier plan ;
+* son animation d'entrée se déclenche.
+
+Lorsqu'elle est fermée :
+
+* elle disparaît proprement.
+
+---
+
+# 4. SIDEBAR
+
+Rendre tous les boutons fonctionnels.
+
+HOME
+→ retourne au desktop principal.
+
+SYSTEM
+→ ouvre System.
+
+FILES
+→ ouvre File Manager.
+
+TERMINAL
+→ ouvre Terminal.
+
+AGENTS
+→ ouvre Agent Center.
+
+MEMORY
+→ ouvre Memory.
+
+SETTINGS
+→ ouvre Settings.
+
+Ajouter un état actif visuel.
+
+---
+
+# 5. COMMAND CENTER
+
+CTRL + K doit ouvrir le Command Center.
+
+Ajouter une vraie recherche de commandes.
+
+Exemples :
+
+open terminal
+
+open files
+
+open agents
+
+open memory
+
+open system
+
+open settings
+
+system scan
+
+close all
+
+fullscreen
+
+toggle particles
+
+toggle grid
+
+reset interface
+
+Les commandes doivent être exécutées.
+
+Ajouter :
+
+* recherche
+* navigation clavier
+* Enter pour exécuter
+* ESC pour fermer
+
+---
+
+# 6. TERMINAL FONCTIONNEL
+
+Créer un terminal simulé mais réellement interactif.
+
+Commandes :
+
+help
+clear
+status
+system
+version
+about
+date
+time
+scan
+agents
+memory
+files
+open terminal
+open files
+open agents
+open settings
+
+Le terminal doit conserver l'historique.
+
+Exemple :
+
+> help
+
+Afficher la liste des commandes.
+
+La commande :
+
+clear
+
+doit réellement nettoyer l'affichage.
+
+La commande :
+
+scan
+
+doit lancer le System Scan.
+
+Ajouter :
+
+↑ / ↓
+
+pour naviguer dans l'historique.
+
+---
+
+# 7. FILE MANAGER
+
+Créer un vrai système de fichiers VIRTUEL dans l'application.
+
+Ne pas accéder aux vrais fichiers Windows pour cette V1.
+
+Structure initiale :
+
+WEND
+├── Projects
+├── Documents
+├── Code
+├── AI
+├── Media
+└── System
+
+Fonctionnalités :
+
+* ouvrir dossier
+* revenir en arrière
+* créer dossier
+* créer fichier texte
+* supprimer fichier virtuel
+* renommer
+* rechercher
+* afficher les détails
+* trier
+
+Les modifications doivent rester après changement de fenêtre.
+
+Sauvegarder les données dans localStorage.
+
+---
+
+# 8. AGENT CENTER
+
+Créer un système d'agents fonctionnel.
+
+Agents :
+
+NEXUS
+
+SIGMA
+
+PHANTOM
+
+Chaque agent possède :
+
+* id
+* nom
+* description
+* statut
+* niveau
+* dernière activité
+
+Actions :
+
+ACTIVATE
+
+DEACTIVATE
+
+VIEW
+
+Lorsqu'un agent est activé :
+
+modifier son statut.
+
+Afficher une activité :
+
+"NEXUS activated"
+
+Créer une fausse activité dynamique.
+
+---
+
+# 9. MEMORY CENTER
+
+Créer une mémoire persistante avec localStorage.
+
+Fonctionnalités :
+
+CREATE MEMORY
+
+DELETE MEMORY
+
+PIN MEMORY
+
+SEARCH MEMORY
+
+FILTER MEMORY
+
+Chaque mémoire :
+
+id
+
+title
+
+content
+
+date
+
+category
+
+pinned
+
+Exemple :
+
+Title:
+WEND 3D
+
+Content:
+Main interface project.
+
+Category:
+PROJECT
+
+---
+
+# 10. SYSTEM MONITOR
+
+Créer un système de statistiques dynamiques.
+
+Afficher :
+
+CPU
+
+RAM
+
+STORAGE
+
+NETWORK
+
+UPTIME
+
+IMPORTANT :
+
+Si les vraies informations système ne sont pas accessibles dans le navigateur, utiliser des données simulées clairement identifiées.
+
+Les valeurs doivent évoluer naturellement.
+
+Exemple :
+
+CPU : 34%
+
+→ 37%
+
+→ 31%
+
+→ 42%
+
+etc.
+
+Ne pas prétendre que ces valeurs représentent réellement Windows.
+
+---
+
+# 11. SYSTEM SCAN
+
+Créer un vrai processus de scan simulé.
+
+Étapes :
+
+INITIALIZING
+
+CHECKING CORE
+
+CHECKING MEMORY
+
+CHECKING NETWORK
+
+CHECKING INTERFACE
+
+FINALIZING
+
+Puis :
+
+SYSTEM HEALTH
+
+98%
+
+Afficher une progression.
+
+Créer une notification à la fin.
+
+---
+
+# 12. NOTIFICATION CENTER
+
+Créer un système global de notifications.
+
+Fonctions :
+
+addNotification()
+
+removeNotification()
+
+clearNotifications()
+
+Types :
+
+INFO
+
+SUCCESS
+
+WARNING
+
+ERROR
+
+Les notifications doivent apparaître dans l'interface.
+
+Ajouter historique des notifications.
+
+---
+
+# 13. SETTINGS
+
+Les paramètres doivent réellement modifier l'application.
+
+## APPEARANCE
+
+Dark
+
+Light
+
+Cyber
+
+Minimal
+
+## EFFECTS
+
+Particles ON/OFF
+
+Grid ON/OFF
+
+Glow ON/OFF
+
+Animations ON/OFF
+
+## PERFORMANCE
+
+Low
+
+Medium
+
+High
+
+## INTERFACE
+
+Sidebar expanded/collapsed
+
+Show system panel
+
+Show clock
+
+Sauvegarder les paramètres dans localStorage.
+
+Au prochain lancement :
+
+restaurer automatiquement les paramètres.
+
+---
+
+# 14. FULLSCREEN
+
+Le bouton fullscreen doit utiliser l'API Fullscreen du navigateur.
+
+Ajouter :
+
+F11
+
+ou bouton :
+
+FULLSCREEN
+
+Si le navigateur refuse :
+
+afficher une notification.
+
+---
+
+# 15. 3D INTERACTION
+
+L'orb WEND doit réellement réagir :
+
+* mouvement souris
+* clic
+* ouverture de fenêtre
+* notification
+* system scan
+* activation d'agent
+
+Créer différents états :
+
+IDLE
+
+LISTENING
+
+PROCESSING
+
+SUCCESS
+
+WARNING
+
+ERROR
+
+Chaque état modifie légèrement :
+
+* rotation
+* lumière
+* particules
+* pulsation
+* anneaux
+
+---
+
+# 16. VOICE COMMANDS
+
+Créer une couche vocale.
+
+Utiliser Web Speech API si disponible.
+
+Bouton :
+
+MIC
+
+États :
+
+IDLE
+
+LISTENING
+
+PROCESSING
+
+ERROR
+
+Commandes :
+
+"open terminal"
+
+"open files"
+
+"open agents"
+
+"open memory"
+
+"open settings"
+
+"system scan"
+
+"close all"
+
+Transformer la phrase reconnue en commande.
+
+Si la reconnaissance vocale n'est pas disponible :
+
+afficher une notification claire.
+
+---
+
+# 17. PERSISTANCE
+
+Utiliser localStorage pour sauvegarder :
+
+settings
+
+memories
+
+virtual files
+
+agents state
+
+notifications
+
+window preferences
+
+theme
+
+Au rechargement de la page :
+
+restaurer automatiquement les données.
+
+Créer un système de version des données pour éviter les erreurs lors des futures mises à jour.
+
+---
+
+# 18. RACCOURCIS CLAVIER
+
+Implémenter :
+
+CTRL + K
+→ Command Center
+
+CTRL + T
+→ Terminal
+
+CTRL + F
+→ Files
+
+CTRL + A
+→ Agents
+
+CTRL + M
+→ Memory
+
+CTRL + ,
+→ Settings
+
+ESC
+→ fermer la fenêtre active
+
+F11
+→ fullscreen
+
+---
+
+# 19. RECHERCHE GLOBALE
+
+Créer une recherche globale.
+
+Elle doit pouvoir rechercher :
+
+* commandes
+* fichiers virtuels
+* mémoires
+* agents
+* fenêtres
+
+Afficher les résultats en temps réel.
+
+Cliquer sur un résultat doit ouvrir directement le bon module.
+
+---
+
+# 20. ERROR HANDLING
+
+Ajouter une gestion propre des erreurs.
+
+Si une fonctionnalité échoue :
+
+ne pas faire planter toute l'application.
+
+Afficher une notification.
+
+Ajouter des fallbacks.
+
+Exemple :
+
+3D impossible
+
+→ passer automatiquement à une interface 2D simplifiée.
+
+Speech API indisponible
+
+→ afficher "Voice unavailable".
+
+localStorage indisponible
+
+→ utiliser une mémoire temporaire en session.
+
+---
+
+# 21. PERFORMANCE
+
+Optimiser la scène Three.js.
+
+Ajouter trois niveaux :
+
+LOW
+
+MEDIUM
+
+HIGH
+
+LOW :
+
+peu de particules
+
+désactivation des effets lourds
+
+MEDIUM :
+
+configuration normale
+
+HIGH :
+
+tous les effets.
+
+Détecter les appareils faibles si possible.
+
+---
+
+# 22. RESPONSIVE
+
+Desktop :
+
+expérience complète.
+
+Tablet :
+
+panneaux adaptés.
+
+Mobile :
+
+fenêtres plein écran.
+
+Sidebar transformée en menu mobile.
+
+Les boutons ne doivent jamais être impossibles à toucher.
+
+---
+
+# 23. TESTS
+
+Après chaque fonctionnalité :
+
+1. lancer l'application ;
+2. vérifier la console ;
+3. vérifier les erreurs TypeScript ;
+4. tester les boutons ;
+5. tester les raccourcis ;
+6. tester le rechargement ;
+7. tester les paramètres ;
+8. vérifier mobile.
+
+Corriger les erreurs avant de passer à la fonctionnalité suivante.
+
+---
+
+# 24. MODE DÉVELOPPEUR
+
+Ajouter une petite console développeur accessible depuis Settings.
+
+Afficher :
+
+WEND VERSION
+
+RENDER MODE
+
+FPS approximatif
+
+ACTIVE WINDOWS
+
+MEMORY ITEMS
+
+AGENTS ONLINE
+
+DEBUG MODE
+
+Permettre d'activer/désactiver DEBUG MODE.
+
+---
+
+# 25. VERSION
+
+Afficher :
+
+WEND 3D
+
+METELLUS OS
+
+Version 0.1.0
+
+Créer une constante centrale pour la version.
+
+---
+
+# 26. CE QUI EST RÉEL ET CE QUI EST SIMULÉ
+
+IMPORTANT.
+
+Le projet doit distinguer clairement :
+
+### RÉEL
+
+* interactions UI
+* stockage local
+* raccourcis clavier
+* fullscreen
+* reconnaissance vocale si disponible
+* animations
+* navigation
+* gestion des fenêtres
+
+### SIMULÉ
+
+* CPU
+* RAM
+* réseau
+* stockage système
+* scan système
+* fichiers Windows
+* agents IA
+
+Ne jamais présenter une donnée simulée comme une vraie donnée système.
+
+---
+
+# 27. CRITÈRE DE FIN
+
+Ne considère pas le travail terminé simplement parce que l'application compile.
+
+Le projet est terminé lorsque :
+
+✓ toutes les fenêtres fonctionnent
+
+✓ tous les boutons fonctionnent
+
+✓ Command Center fonctionne
+
+✓ Terminal fonctionne
+
+✓ File Manager fonctionne
+
+✓ Memory fonctionne
+
+✓ Agents fonctionnent
+
+✓ Settings fonctionnent
+
+✓ localStorage fonctionne
+
+✓ notifications fonctionnent
+
+✓ raccourcis fonctionnent
+
+✓ fullscreen fonctionne
+
+✓ voice fonctionne lorsqu'elle est disponible
+
+✓ System Scan fonctionne
+
+✓ 3D réagit aux interactions
+
+✓ aucune erreur critique dans la console
+
+✓ responsive fonctionne
+
+✓ le design original WEND est conservé
+
+---
+
+# 28. PROCÉDURE
+
+Commence maintenant par analyser le projet existant.
+
+Ne me demande pas de recréer les fichiers déjà présents.
+
+Identifie d'abord ce qui existe.
+
+Ensuite :
+
+PHASE 1 → architecture fonctionnelle
+
+PHASE 2 → Window Manager
+
+PHASE 3 → Command Center
+
+PHASE 4 → Terminal
+
+PHASE 5 → File Manager
+
+PHASE 6 → Agents
+
+PHASE 7 → Memory
+
+PHASE 8 → Settings
+
+PHASE 9 → Notifications
+
+PHASE 10 → System Scan
+
+PHASE 11 → Voice
+
+PHASE 12 → Persistence
+
+PHASE 13 → Keyboard shortcuts
+
+PHASE 14 → Error handling
+
+PHASE 15 → Performance
+
+PHASE 16 → tests finaux
+
+Après chaque phase, vérifie que l'application fonctionne avant de continuer.
+
+OBJECTIF :
+
+Transformer le prototype WEND 3D en une véritable **application desktop web interactive**, cohérente, persistante et extensible, tout en conservant son identité futuriste.
